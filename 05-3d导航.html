@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+
+    ul {
+      width: 800px;
+      height: 40px;
+      border: 1px solid #000;
+      margin: 200px auto;
+    }
+
+
+    /*perspective：并不是一定需要的， 仅仅是为看起来有近大远小*/
+    /*transform-style:preserve-3d是一定需要的，给父元素加，子元素才能在3d空间内*/
+
+    li {
+      width: 100px;
+      height: 40px;
+      float: left;
+      position: relative;
+      /*perspective: 100px;*/
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+
+    li:hover {
+      transform: rotateX(-90deg);
+    }
+
+    li span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left:0;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    /*往前*/
+    span:nth-child(1) {
+      background-color: yellow;
+      transform: translateZ(20px);
+    }
+    
+    span:nth-child(2) {
+      background-color: green;
+      transform: rotateX(90deg) translateZ(20px);
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+
+</ul>
+
+</body>
+</html>
